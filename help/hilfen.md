@@ -1,5 +1,15 @@
 # Hilfen und Inspiration
 
+## Aufbau einer Seite
+
+Entscheidet euch für einen One-Pager oder eine Webseite mit Unterseiten. Ein möglicher Aufbau:
+
+- **Kopfbereich** mit Titel oder Name
+- **Einführung** mit kurzem Überblick oder großem Bild/Galerie
+- **Hauptinhalt** mit Informationen
+- **Kontakt oder Abschlussbereich**
+- **Fußbereich** mit Zusatzinfos
+
 ## Inspiration für Webseiten
 
 Schaut euch ein paar Webseiten an und achtet zum Beispiel auf:

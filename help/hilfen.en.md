@@ -1,5 +1,15 @@
 # Help and Inspiration
 
+## Page Structure
+
+Choose a one-page website or a website with subpages. A possible structure:
+
+- **Header** with a title or name
+- **Introduction** with a short overview or a large image/gallery
+- **Main content** with information
+- **Contact or closing section**
+- **Footer** with additional information
+
 ## Website Inspiration
 
 Have a look at a few websites and pay attention to things such as:
