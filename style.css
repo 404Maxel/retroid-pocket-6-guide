@@ -1,0 +1,501 @@
+/* =========================================
+   CLASSIC 16-BIT SNES / SUPER FAMICOM THEME
+   ========================================= */
+
+:root {
+  /* Klassische 16-Bit Konsolen-Farben */
+  --snes-shell: #d2cfcb;      /* Legendäres Super-Nintendo-Hellgrau */
+  --snes-panel: #dfdcd8;      /* Helleres Konsolen-Gehäuse */
+  --snes-dark: #4f4c59;       /* Dunkles Controller-Steuerkreuz-Grau */
+  --snes-bg: #262430;         /* Tiefer 90er-Bildschirm-Hintergrund */
+  --snes-purple: #6b5b95;     /* US-SNES Violett */
+  --snes-lavender: #9b8ec4;   /* US-SNES Hell-Lila */
+
+  /* Die 4 klassischen Super Famicom / PAL-SNES Button-Farben */
+  --btn-red: #d9383a;         /* A-Button Rot */
+  --btn-yellow: #e5b822;      /* B-Button Gelb */
+  --btn-green: #389852;       /* Y-Button Grün */
+  --btn-blue: #2b6cb0;        /* X-Button Blau */
+
+  --text-dark: #1d1b24;
+  --text-light: #f4f2ee;
+  --border-pixel: #1d1b24;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--snes-bg);
+  color: var(--text-dark);
+  font-family: "VT323", monospace;
+  font-size: 22px;
+  line-height: 1.45;
+  position: relative;
+}
+
+/* Subtiler CRT-Scanline-Effekt */
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0px,
+    rgba(255, 255, 255, 0) 2px,
+    rgba(0, 0, 0, 0.12) 3px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+}
+
+/* Pixel-Überschriften */
+h1,
+h2,
+h3,
+.badge,
+.retro-btn,
+.step-number,
+.console-badge,
+.tag {
+  font-family: "Press Start 2P", monospace;
+}
+
+/* =========================================
+   HEADER & NAVIGATION (FLEXBOX)
+   ========================================= */
+
+.site-header {
+  background-color: var(--snes-shell);
+  border-bottom: 6px solid var(--snes-purple);
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--btn-red);
+  color: #fff;
+  font-size: 10px;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border: 2px solid var(--border-pixel);
+  box-shadow: 3px 3px 0 var(--border-pixel);
+}
+
+.brand h1 {
+  font-size: 22px;
+  color: var(--snes-dark);
+  text-shadow: 2px 2px 0 #fff;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--snes-purple);
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  border: 3px solid var(--border-pixel);
+  box-shadow: 3px 3px 0 var(--border-pixel);
+  padding: 8px 14px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.1s;
+}
+
+/* Die 4 Navigationslinks in den 4 klassischen SNES-Tastenfarben */
+.main-nav a:nth-child(1) { background-color: var(--btn-red); }
+.main-nav a:nth-child(2) { background-color: var(--btn-yellow); color: var(--text-dark); }
+.main-nav a:nth-child(3) { background-color: var(--btn-green); }
+.main-nav a:nth-child(4) { background-color: var(--btn-blue); }
+
+.main-nav a:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* =========================================
+   MAIN CONTAINER & HERO SECTION
+   ========================================= */
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hero-card {
+  background-color: var(--snes-shell);
+  border: 4px solid var(--border-pixel);
+  box-shadow: 8px 8px 0 #000;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.hero-text {
+  flex: 1 1 520px;
+}
+
+.eyebrow {
+  color: var(--btn-blue);
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.hero-text h2 {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.retro-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 14px 20px;
+  border: 3px solid var(--border-pixel);
+  box-shadow: 4px 4px 0 var(--border-pixel);
+  transition: transform 0.1s;
+}
+
+.retro-btn:hover {
+  transform: translate(-2px, -2px);
+}
+
+.retro-btn.primary {
+  background-color: var(--snes-purple);
+  color: #fff;
+}
+
+.retro-btn.secondary {
+  background-color: var(--btn-yellow);
+  color: var(--text-dark);
+}
+
+/* =========================================
+   CSS-PIXEL-HANDHELD ILLUSTRATION (CLASSIC 16-BIT)
+   ========================================= */
+
+.handheld-art {
+  flex: 0 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.rp6-body {
+  width: 310px;
+  height: 150px;
+  background-color: #c8c4be; /* Authentisches SNES-Gehäusegrau */
+  border: 4px solid #000;
+  border-radius: 26px;
+  box-shadow: 6px 6px 0 #000;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.rp6-dpad {
+  width: 44px;
+  height: 44px;
+  background-color: #3a3842;
+  color: #cfccc6;
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.rp6-screen {
+  flex: 1;
+  height: 108px;
+  background: linear-gradient(135deg, #27233a, #4b3f72);
+  border: 4px solid #3a3842;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+}
+
+.rp6-screen span {
+  font-family: "Press Start 2P", monospace;
+  font-size: 9px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.rp6-screen small {
+  color: var(--btn-yellow);
+  font-size: 16px;
+}
+
+.rp6-stars {
+  color: var(--btn-red);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.rp6-buttons {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.rp6-buttons span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Die 4 klassischen Super Famicom / PAL-Buttons */
+.btn-y { background-color: var(--btn-green); }
+.btn-x { background-color: var(--btn-blue); }
+.btn-b { background-color: var(--btn-yellow); color: #111 !important; }
+.btn-a { background-color: var(--btn-red); }
+
+/* =========================================
+   ALLGEMEINE SEKTIONEN & KARTEN
+   ========================================= */
+
+.retro-section {
+  background-color: var(--snes-shell);
+  border: 4px solid var(--border-pixel);
+  box-shadow: 8px 8px 0 #000;
+  padding: 28px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 3px dashed var(--snes-dark);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  color: var(--snes-purple);
+}
+
+.tag {
+  background-color: var(--btn-green);
+  border: 2px solid var(--border-pixel);
+  color: #fff;
+  font-size: 10px;
+  padding: 6px 10px;
+}
+
+.section-intro {
+  margin-bottom: 22px;
+  color: var(--text-dark);
+}
+
+/* Hardware Grid */
+.specs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.spec-box {
+  flex: 1 1 220px;
+  background-color: var(--snes-panel);
+  border: 3px solid var(--border-pixel);
+  box-shadow: 4px 4px 0 var(--snes-dark);
+  padding: 18px;
+}
+
+.spec-box h3 {
+  font-size: 11px;
+  color: var(--btn-blue);
+  margin-bottom: 10px;
+}
+
+.spec-value {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.spec-desc {
+  color: #3d3a47;
+  font-size: 20px;
+}
+
+/* Setup Steps */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.step-card {
+  background-color: var(--snes-panel);
+  border: 3px solid var(--border-pixel);
+  box-shadow: 4px 4px 0 var(--snes-dark);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step-number {
+  color: #fff;
+  font-size: 11px;
+  padding: 10px 14px;
+  border: 2px solid var(--border-pixel);
+  box-shadow: 3px 3px 0 var(--border-pixel);
+}
+
+/* Jeder Setup-Schritt bekommt eine der 4 Classic-Farben */
+.step-card:nth-child(1) .step-number { background-color: var(--btn-red); }
+.step-card:nth-child(2) .step-number { background-color: var(--btn-yellow); color: var(--text-dark); }
+.step-card:nth-child(3) .step-number { background-color: var(--btn-green); }
+.step-card:nth-child(4) .step-number { background-color: var(--btn-blue); }
+
+.step-content {
+  flex: 1 1 400px;
+}
+
+.step-content h3 {
+  font-size: 13px;
+  color: var(--snes-purple);
+  margin-bottom: 8px;
+}
+
+code {
+  background-color: var(--snes-dark);
+  color: var(--btn-yellow);
+  padding: 2px 6px;
+  border: 1px solid var(--border-pixel);
+  font-family: monospace;
+  font-size: 17px;
+}
+
+/* Emulatoren Grid */
+.emu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.emu-card {
+  flex: 1 1 310px;
+  background-color: var(--snes-panel);
+  border: 3px solid var(--border-pixel);
+  box-shadow: 4px 4px 0 var(--snes-dark);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emu-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.console-badge {
+  background-color: var(--snes-purple);
+  color: #fff;
+  border: 2px solid var(--border-pixel);
+  font-size: 9px;
+  padding: 4px 8px;
+}
+
+.emu-card h3 {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.systems {
+  color: var(--btn-red);
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 2px solid var(--snes-dark);
+  padding-bottom: 8px;
+}
+
+.emu-card ul {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Bonus Tipps */
+.tips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tip-box {
+  flex: 1 1 320px;
+  background-color: var(--snes-panel);

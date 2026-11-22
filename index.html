@@ -1,12 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RETROID POCKET 6 // RETRO SETUP GUIDE</title>
+  <!-- Retro Pixel-Schriftart von Google Fonts -->
+  <link rel="preconnect" href="https://googleapis.com" />
+  <link rel="preconnect" href="https://gstatic.com" crossorigin />
+  <link
+    href="https://googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-</body>
-</html>
+  <!-- Subtiler Röhrenmonitor-Effekt (Scanlines) -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="badge">PLAYER 1 READY</span>
+      <h1>RETROID POCKET 6</h1>
+      <p class="subtitle">DER ULTIMATIVE EMULATIONS- &amp; SETUP-GUIDE</p>
+    </div>
+
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <a href="#hardware">01. HARDWARE</a>
+      <a href="#setup">02. ERSTEINRICHTUNG</a>
+      <a href="#emulatoren">03. EMULATOREN</a>
+      <a href="#frontend">04. FRONTEND &amp; TIPPS</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero-Box im Retro-Konsolen-Look -->
+    <section class="hero-card">
+      <div class="hero-text">
+        <p class="eyebrow">&gt; SYSTEM_BOOT: ANDROID 13 // SNAPDRAGON 8 GEN 2</p>
+        <h2>Taschen-Arcade der Extraklasse</h2>
+        <p>
+          Der <strong>Retroid Pocket 6</strong> bringt dank Qualcomm Snapdragon 8 Gen 2
+          und 120-Hz-AMOLED-Display alles flüssig auf den Screen – vom klassischen
+          Game Boy über PS2 und GameCube bis hin zu Wii U und Switch. Hier erfährst du
+          Schritt für Schritt, wie du deinen Handheld sauber einrichtest.
+        </p>
+        <div class="hero-actions">
+          <a href="#setup" class="retro-btn primary">START SETUP &gt;&gt;</a>
+          <a href="#emulatoren" class="retro-btn secondary">EMULATOR-LISTE</a>
+        </div>
+      </div>
+
+      <!-- Stylisierte CSS-Konsole als Pixel-Illustration -->
+      <div class="handheld-art" aria-label="Retroid Pocket 6 Illustration">
+        <div class="rp6-body">
+          <div class="rp6-dpad">+</div>
+          <div class="rp6-screen">
+            <span>120Hz AMOLED</span>
+            <small>1920 × 1080</small>
+            <div class="rp6-stars">★ ★ ★ ★ ★</div>
+          </div>
+          <div class="rp6-buttons">
+            <span class="btn-y">Y</span>
+            <span class="btn-x">X</span>
+            <span class="btn-b">B</span>
+            <span class="btn-a">A</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sektion 1: Hardware Specs -->
+    <section id="hardware" class="retro-section">
+      <div class="section-header">
+        <h2>[01] HARDWARE-SPEZIFIKATIONEN</h2>
+        <span class="tag">POWER LEVEL: MAX</span>
+      </div>
+
+      <div class="specs-grid">
+        <article class="spec-box">
+          <h3>CPU &amp; GRAFIK</h3>
+          <p class="spec-value">Snapdragon 8 Gen 2</p>
+          <p class="spec-desc">Octa-Core bis 3,2 GHz + Adreno 740 GPU mit aktiver Kühlung.</p>
+        </article>
+
+        <article class="spec-box">
+          <h3>DISPLAY</h3>
+          <p class="spec-value">5,5" AMOLED 120 Hz</p>
+          <p class="spec-desc">Full-HD (1920 × 1080), knackige Farben &amp; perfektes Schwarz für 4:3-Balken.</p>
+        </article>
+
+        <article class="spec-box">
+          <h3>SPEICHER &amp; RAM</h3>
+          <p class="spec-value">8 / 12 GB LPDDR5X</p>
+          <p class="spec-desc">128 / 256 GB UFS 3.1 intern + microSD-Slot (bis zu 2 TB).</p>
+        </article>
+
+        <article class="spec-box">
+          <h3>AKKU &amp; STEUERUNG</h3>
+          <p class="spec-value">6000 mAh (27W)</p>
+          <p class="spec-desc">Hall-Effect-Sticks, analoge L2/R2-Trigger &amp; M1/M2-Rückseiten-Tasten.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sektion 2: Schritt-für-Schritt Einrichtung -->
+    <section id="setup" class="retro-section">
+      <div class="section-header">
+        <h2>[02] SCHRITT-FÜR-SCHRITT EINRICHTUNG</h2>
+        <span class="tag">QUEST LOG</span>
+      </div>
+
+      <div class="steps-list">
+        <article class="step-card">
+          <div class="step-number">STEP 01</div>
+          <div class="step-content">
+            <h3>Erster Start &amp; Android-Basis</h3>
+            <p>
+              Schalte den RP6 ein, wähle Sprache und WLAN und aktiviere die
+              <strong>Google Play-Dienste</strong>. Wichtig: Überspringe beim Einrichten
+              die vorinstallierten Standard-Emulatoren – diese sind oft veraltet. Wähle
+              zunächst den normalen <strong>AOSP-Launcher</strong> und installiere danach
+              alle offiziellen <strong>OTA-Systemupdates</strong>.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">STEP 02</div>
+          <div class="step-content">
+            <h3>microSD-Karte &amp; Ordnerstruktur anlegen</h3>
+            <p>
+              Formatiere deine microSD-Karte als <strong>mobilen Speicher (Portable Storage)</strong>,
+              damit du sie jederzeit am PC auslesen kannst. Lege darauf einen Hauptordner
+              <code>ROMs</code> (mit Unterordnern wie <code>snes</code>, <code>gba</code>,
+              <code>ps2</code>, <code>gc</code>) sowie einen separaten Ordner <code>BIOS</code> an.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">STEP 03</div>
+          <div class="step-content">
+            <h3>BIOS-Dateien &amp; eigene Spiele kopieren</h3>
+            <p>
+              Manche Systeme wie PlayStation 1, PlayStation 2, Sega Saturn oder Dreamcast
+              benötigen System-Dateien (z. B. <code>scph5501.bin</code> für PS1). Kopiere
+              deine legal erstellten Sicherheitskopien (ROMs/ISOs) in die jeweiligen
+              System-Ordner auf der SD-Karte.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">STEP 04</div>
+          <div class="step-content">
+            <h3>Controller-Profil &amp; Lüfter einstellen</h3>
+            <p>
+              Öffne die <strong>Handheld Settings</strong>: Hier kannst du das Tastenlayout
+              zwischen Nintendo- und Xbox-Belegung umschalten, die Rücktasten (M1/M2) belegen
+              und in den Schnelleinstellungen zwischen <em>Standard</em>, <em>Performance</em>
+              und <em>High Performance</em> wechseln.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sektion 3: Emulatoren Übersicht -->
+    <section id="emulatoren" class="retro-section">
+      <div class="section-header">
+        <h2>[03] EMPFOHLENE EMULATOREN &amp; SETUP</h2>
+        <span class="tag">TIER LIST</span>
+      </div>
+
+      <p class="section-intro">
+        Dank Snapdragon 8 Gen 2 meistert der Retroid Pocket 6 nahezu jede klassische
+        Konsole in 2x- bis 4x-Auflösung. Installiere aktuelle Builds am besten über den
+        Google Play Store oder per <strong>Obtainium</strong> (für GitHub-Releases):
+      </p>
+
+      <div class="emu-grid">
+        <article class="emu-card">
+          <div class="emu-top">
+            <span class="console-badge">8-BIT &amp; 16-BIT</span>
+            <h3>RetroArch (64-Bit)</h3>
+          </div>
+          <p class="systems">NES, SNES, Mega Drive, GB/GBC/GBA, Arcade, N64, Dreamcast</p>
+          <ul>
+            <li><strong>Setup-Tipp:</strong> Lade über den <em>Online Updater</em> passende Cores (z. B. <code>bsnes</code>, <code>mGBA</code>, <code>Flycast</code>).</li>
+            <li><strong>Pflicht-Einstellung:</strong> Speichere deine Konfiguration unter <em>Configuration File &gt; Save Current Configuration</em>.</li>
+          </ul>
+        </article>
+
+        <article class="emu-card">
+          <div class="emu-top">
+            <span class="console-badge">PLAYSTATION 1</span>
+            <h3>DuckStation</h3>
+          </div>
+          <p class="systems">Sony PlayStation (PSX)</p>
+          <ul>
+            <li><strong>Setup-Tipp:</strong> Weisen den Ordner für deine PS1-BIOS-Datei zu und verknüpfe dein <code>psx</code>-Spieleverzeichnis.</li>
+            <li><strong>Grafik-Boost:</strong> Stelle die interne Auflösung auf <strong>4x (1080p)</strong> und aktiviere PGXP Geometry Correction gegen wackelnde Texturen.</li>
+          </ul>
+        </article>
+
+        <article class="emu-card">
+          <div class="emu-top">
+            <span class="console-badge">PLAYSTATION 2</span>
+            <h3>NetherSX2 / ARMSX2</h3>
+          </div>
+          <p class="systems">Sony PlayStation 2</p>
+          <ul>
+            <li><strong>Setup-Tipp:</strong> Einmalig dein PS2-BIOS importieren und den Controller automatisch auf „DualShock 2“ mappen lassen.</li>
+            <li><strong>Grafik-Boost:</strong> Läuft auf dem RP6 problemlos mit <strong>2.5x bis 3x Auflösung</strong> (Vulkan-Renderer wählen).</li>
+          </ul>
+        </article>
+
+        <article class="emu-card">
+          <div class="emu-top">
+            <span class="console-badge">GAMECUBE &amp; WII</span>
+            <h3>Dolphin Emulator</h3>
+          </div>
+          <p class="systems">Nintendo GameCube &amp; Nintendo Wii</p>
+          <ul>
+            <li><strong>Setup-Tipp:</strong> Belege GameCube- und Wii-Classic-Controller getrennt; nutze den rechten Stick für Wii-Pointer-Bewegungen.</li>
+            <li><strong>Grafik-Boost:</strong> Aktiviere <strong>Vulkan</strong> und <strong>3x Native (1080p)</strong> für gestochen scharfe Klassiker.</li>
+          </ul>
+        </article>
+
+        <article class="emu-card">
+          <div class="emu-top">
+            <span class="console-badge">NINTENDO 3DS &amp; DS</span>
